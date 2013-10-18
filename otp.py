@@ -38,15 +38,15 @@ def decrypt(ciphertext, key):
     return char + decrypt(ciphertext[1:], key[1:])
 
 if __name__ == '__main__':
-	availableOpt = ["-d", "-e"]
-	if len(sys.argv) == 1 or sys.argv[1] not in availableOpt:
-		print(help)
-		exit(0)
+    availableOpt = ["-d", "-e"]
+    if len(sys.argv) == 1 or sys.argv[1] not in availableOpt:
+        print(help)
+        exit(0)
 
-	key = input("Key: ")
-	msg = input("Message: ")
+    key = input("Key: ")
+    msg = input("Message: ")
 
-	if sys.argv[1] == availableOpt[1]:
-		print(encrypt(msg, key))
-	elif sys.argv[1] == availableOpt[0]:
-		print(decrypt(msg, key))
+    if sys.argv[1] == availableOpt[1]:
+        print(encrypt(msg, key))
+    elif sys.argv[1] == availableOpt[0]:
+        print(decrypt(msg, key))
